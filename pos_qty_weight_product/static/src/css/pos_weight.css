@@ -1,0 +1,14 @@
+.pos .btn-add-product{
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    padding: 10px 16px;
+    font-size: 20px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
+
+.pos .weightmanual{
+    font-size: 35px;
+    width:100px;
+}

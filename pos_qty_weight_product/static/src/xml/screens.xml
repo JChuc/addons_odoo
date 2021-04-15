@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+    <t t-name="ScaleManualWidget">
+        <div class="payment-screen screen pos  ScaleManualWidget">
+            <div class="screen-content">
+                <div class="top-content">
+                    <span class="button back">
+                        <i class="fa fa-angle-double-left"></i>
+                        Back
+                    </span>
+                    <h1><t t-esc="widget.get_product_name()"/></h1>
+                    <!--<span class="button next">
+                                                    Next
+                    <i class="fa fa-angle-double-right"></i>
+                    </span>-->
+
+                </div>
+                <div class="left-content pc40 touch-scrollable scrollable-y order">
+                    <div class="paymentmethods-container">
+                        <div class="product-img">
+                            <img t-att-src="widget.get_product_image_url()" />
+                        </div>
+                        <div class="product-price">
+                            <h4><span>Precio: </span><t t-esc="widget.format_currency(widget.get_product_price()) + '/' + widget.get_product_uom()" /></h4>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="right-content pc60 touch-scrollable scrollable-y">
+                    <section class='weight-container'>
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <tr>
+                                    <td>
+                                        <h2>
+                                            <p>
+                                                <span>Cantidad: </span>
+                                            </p>
+                                        </h2>
+                                    </td>
+                                    <td>
+                                        <h2>
+                                            <p>
+                                                <input type="text" class="weightmanual"></input>
+                                                <t t-esc="widget.get_product_uom()"/>
+                                            </p>
+                                        </h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h2>
+                                            <p>
+                                                <span>Subtotal: </span>
+
+                                            </p>
+                                        </h2>
+                                    </td>
+                                    <td>
+                                        <h2>
+                                            <p>
+                                                 <span class="computed-price"></span>
+                                            </p>
+                                        </h2>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                        <button type="button" class="btn-add-product">
+                            Agregar
+                        </button>
+                    </section>
+
+                        <section class='payment-numpad'>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+    </t>
+
+</templates>
